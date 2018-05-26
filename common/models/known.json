@@ -1,0 +1,44 @@
+{
+  "name": "known",
+  "plural": "knowns",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "strictObjectIDCoercion": true
+  },
+  "properties": {
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "firstname": {
+      "type": "string",
+      "required": false
+    },
+    "lastname": {
+      "type": "string",
+      "required": false
+    },
+    "known": {
+      "type": "string",
+      "required": false
+    },
+    "image_processed": {
+      "type": "string",
+      "required": false
+    },
+    "age": {
+      "type": "number",
+      "required": false
+    },
+    "photo": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

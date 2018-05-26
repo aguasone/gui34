@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "face": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "customer": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "connu": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "photo": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "chunk": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "test": {
+    "dataSource": "db",
+    "public": false
+  }
+}

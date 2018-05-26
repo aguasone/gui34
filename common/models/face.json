@@ -1,0 +1,38 @@
+{
+  "name": "face",
+  "plural": "faces",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "strictObjectIDCoercion": true
+  },
+  "properties": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "image_processed": {
+      "type": "string",
+      "required": true
+    },
+    "known": {
+      "type": "string",
+      "required": true
+    },
+    "known_conf": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "hasOne",
+      "model": "customer",
+      "foreignKey": "photo",
+      "primaryKey": "known"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

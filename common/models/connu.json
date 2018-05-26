@@ -1,0 +1,24 @@
+{
+  "name": "connu",
+  "plural": "connus",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "strictObjectIDCoercion": false
+  },
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "required": true
+    },
+    "photo": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

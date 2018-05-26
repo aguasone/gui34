@@ -1,0 +1,38 @@
+{
+  "name": "photo",
+  "plural": "photos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "strictObjectIDCoercion": true
+  },
+  "properties": {
+    "chunkSize": {
+      "type": "number"
+    },
+    "uploadDate": {
+      "type": "date"
+    },
+    "length": {
+      "type": "number"
+    },
+    "md5": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chunks": {
+      "type": "hasOne",
+      "model": "chunk",
+      "foreignKey": "files_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

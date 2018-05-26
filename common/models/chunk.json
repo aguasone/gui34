@@ -1,0 +1,27 @@
+{
+  "name": "chunk",
+  "plural": "chunks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "files_id": {
+      "type": "string",
+      "required": true
+    },
+    "n": {
+      "type": "number",
+      "required": true
+    },
+    "data": {
+      "type": "buffer",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
