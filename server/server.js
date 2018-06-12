@@ -64,40 +64,8 @@ return a;
 			//	var db = app.dataSources.mongoDs;
 			//var face = app.models.face;
 
-			app.io = require('socket.io')(app.start());
+			app.start();
 		console.log('io started');
-		app.io.on('connection', function(socket){
-			console.log('a user connected');
-			socket.on('disconnect', function(){
-				console.log('user disconnected');
-			});
-			socket.on('new', function(){
-				console.log('new');
-				socket.emit ('newSuccess');
-				allQueries().then( result => {
-					socket.emit ('reload',result);
-					socket.broadcast.emit('reload', result)
-					})
-			});
-			socket.on('add', function(customer){
-				socket.broadcast.emit('face', customer)
-				console.log('add', customer);
-			});
-			socket.on('debug', function(customer){
-				socket.emit('toggleDebug')
-				socket.broadcast.emit('toggleDebug')
-				console.log('debug');
-			});
-			socket.on('update', function(customer){
-				socket.broadcast.emit('update', customer)
-				console.log('update', customer);
-			});
-			socket.on('edit', function(customer){
-				socket.broadcast.emit('edit', customer)
-				console.log('edit', customer);
-			});
-
-		});
 	});
 });
 

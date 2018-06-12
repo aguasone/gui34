@@ -43,6 +43,14 @@
     "dataSource": "mongo",
     "public": true
   },
+  "visitor": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "camera": {
+    "dataSource": "mongo",
+    "public": true
+  },
   "connu": {
     "dataSource": "mongo",
     "public": true

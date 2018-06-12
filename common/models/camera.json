@@ -1,6 +1,6 @@
 {
-  "name": "customer",
-  "plural": "customers",
+  "name": "camera",
+  "plural": "cameras",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,27 +8,35 @@
     "strictObjectIDCoercion": true
   },
   "properties": {
-    "date": {
+    "ip": {
+      "type": "string",
+      "required": false
+    },
+    "port": {
+      "type": "string",
+      "required": false
+    },
+    "hostname": {
       "type": "string",
       "required": true
     },
-    "firstname": {
+    "action": {
+      "type": "string",
+      "required": false 
+    },
+    "date": {
+      "type": "string",
+      "required": false 
+    },
+    "name": {
       "type": "string",
       "required": false
     },
-    "lastname": {
+    "url": {
       "type": "string",
-      "required": false
+      "required": true 
     },
-    "age": {
-      "type": "number",
-      "required": false
-    },
-    "photo": {
-      "type": "string",
-      "required": false
-    },
-    "notes": {
+    "location": {
       "type": "string",
       "required": false
     }

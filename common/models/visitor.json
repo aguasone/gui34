@@ -1,6 +1,6 @@
 {
-  "name": "customer",
-  "plural": "customers",
+  "name": "visitor",
+  "plural": "visitors",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -12,23 +12,19 @@
       "type": "string",
       "required": true
     },
-    "firstname": {
+    "action": {
       "type": "string",
       "required": false
     },
-    "lastname": {
+    "name": {
       "type": "string",
       "required": false
     },
-    "age": {
-      "type": "number",
-      "required": false
-    },
-    "photo": {
+    "confidence": {
       "type": "string",
       "required": false
     },
-    "notes": {
+    "image": {
       "type": "string",
       "required": false
     }
