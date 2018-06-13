@@ -16,10 +16,16 @@ RUN git config --global user.name "aguasone" && \
 WORKDIR /app
 
 # Clone Master and Install dependencies
-RUN git clone https://github.com/aguasone/gui34
+ADD https://api.github.com/repos/aguasone/gui34/git/refs/heads/master version.json
+RUN git clone -bmaster https://github.com/aguasone/gui34.git
+#RUN git clone https://github.com/aguasone/gui34
 
 # Run App
 WORKDIR /app/gui34
 RUN npm install
 EXPOSE 3000
 CMD node server/server.js
+
+
+
+
